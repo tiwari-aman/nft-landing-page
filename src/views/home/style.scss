@@ -1,0 +1,52 @@
+@import "../../assets/scss/variables.scss";
+
+.navbar {
+  @include d-flex();
+  padding-top: 27px;
+  .nav-menu {
+    @include d-flex();
+    @include media-screen($lg) {
+      @include d-flex($display: none);
+    }
+  }
+  .navlinks {
+    @include d-flex($gap: 2rem);
+    @include bold-18();
+    .navlink {
+      cursor: pointer;
+    }
+  }
+  .social-icons {
+    @include d-flex($gap: 1.25rem);
+    .icon {
+      cursor: pointer;
+    }
+  }
+  .toggler {
+    @include d-flex($display: none);
+    cursor: pointer;
+    @include media-screen($lg) {
+      @include d-flex($display: block);
+    }
+  }
+}
+.sidebar-container {
+  height: 100vh;
+  width: 100%;
+  background: rgb(255, 158, 30);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  @include d-flex($justify: flex-end, $align: flex);
+  .sidebar-header{
+    width: 100%;
+    height: 60px;
+    padding: 10px;
+    background: rgb(255, 158, 30);
+  }
+  .sidebar-body {
+    min-width: 300px;
+    background: rgb(255, 255, 255);
+  }
+}
