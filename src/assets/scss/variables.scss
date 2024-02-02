@@ -11,11 +11,11 @@
 $primary: linear-gradient(to right, #2600fc, #ff00ea);
 $primary-color: linear-gradient(to right, #2600fc, #ff00ea);
 $secondary-color: #0f051d;
-$black-color: #333333;
+$black: #333333;
 $white: #ffffff;
 $font-color: #7b7583;
 $logo-color: #5e5873;
-
+$border-color: rgba(123, 117, 131, 0.3);
 $primaryFont: "Inter", sans-serif;
 $secondaryFont: "Poppins", sans-serif;
 
@@ -27,21 +27,6 @@ $fw500: 500;
 $fw600: 600;
 $fw700: 700;
 $fw800: 800;
-
-// $mediaSizes: (
-//   "xss": 320px,
-//   "xxs": 420px,
-//   "xs": 475px,
-//   "sm": 576px,
-//   "md": 767px,
-//   "lg": 991px,
-//   "xl": 1200px,
-//   "xxl": 1500px,
-//   "xlnew": 1199px,
-//   "2xl": 1400px,
-//   "3xl": 1600px,
-//   "4xl": 1800px,
-// );
 
 $xss: 320px;
 $xxs: 420px;
@@ -68,17 +53,19 @@ $xxxxl: 1800px;
   $display: flex,
   $justify: space-between,
   $align: center,
-  $gap: 0
+  $gap: 0,
+  $direction: row
 ) {
   display: $display;
   justify-content: $justify;
   align-items: $align;
   gap: $gap;
+  flex-direction: $direction;
 }
 
-@mixin bold-18 {
-  font-size: $fs18;
-  font-weight: $fw700;
+@mixin font-style($fs: $fs18, $fw: $fw700) {
+  font-size: $fs;
+  font-weight: $fw;
 }
 
 @mixin media-screen($screen-width) {

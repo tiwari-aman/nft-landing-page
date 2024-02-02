@@ -1,7 +1,7 @@
-import twitter from "../../assets/images/logos/twitter.svg";
-import discord from "../../assets/images/logos/discord.svg";
-import instagram from "../../assets/images/logos/instagram.svg";
-import facebook from "../../assets/images/logos/briefcase.svg";
+import twitter from "../../assets/images/icons/twitter.svg";
+import discord from "../../assets/images/icons/discord.svg";
+import instagram from "../../assets/images/icons/instagram.svg";
+import facebook from "../../assets/images/icons/briefcase.svg";
 
 const SocialIcons = () => {
   const socialIconsImages = [twitter, discord, instagram, facebook];

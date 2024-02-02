@@ -1,4 +1,4 @@
-import SocialIcons from "../common/SocialIcons.jsx";
+import SocialIcons from "../../common/SocialIcons.jsx";
 import Navlinks from "./Navlinks";
 
 const SidebarMenu = ({ toggleMenu }) => {

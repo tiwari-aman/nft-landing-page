@@ -1,6 +1,6 @@
-import Logo from "../../assets/images/logos/nft-black-logo.svg";
+import Logo from "../../../assets/images/logos/nft-black-logo.svg";
 import Navlinks from "./Navlinks";
-import SocialIcons from "../common/SocialIcons";
+import SocialIcons from "../../common/SocialIcons";
 import HamburgerMenu from "./HamburgerMenu";
 import { useState } from "react";
 import SidebarMenu from "./SidebarMenu";
@@ -14,7 +14,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="navbar">
+      <div className="navbar container">
         {/* Logo */}
         <img src={Logo} alt="NftLogo" />
         <div className="nav-menu">

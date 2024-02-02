@@ -1,4 +1,4 @@
-import hamburger from "../../assets/images/logos/hamburger.svg";
+import hamburger from "../../../assets/images/icons/hamburger.svg";
 const HamburgerMenu = ({toggleMenu}) => {
 
   return (
