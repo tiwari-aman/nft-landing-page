@@ -1,0 +1,42 @@
+@import "../../assets/scss/variables.scss";
+
+.choose-us-section {
+  padding-bottom: 110px;
+  .section-heading {
+    .primary {
+      margin: 0;
+      margin-bottom: 80px;
+    }
+  }
+  .card-container {
+    @include d-flex($gap: 1.75rem);
+    @include media-screen($lg) {
+      @include d-flex($justify: center, $gap: 1.75rem);
+      flex-wrap: wrap;
+    }
+    padding-bottom: 130px;
+    .quality-card {
+      height: 277px;
+      width: 278px;
+      padding: 49px 33px;
+      border: 1px solid $border-color;
+      border-radius: 25px;
+      img {
+        margin-bottom: 34px;
+      }
+      .card-heading {
+        h1 {
+          margin-top: 0;
+        }
+        margin-bottom: 24px;
+        @include font-style(28px, bold);
+      }
+      .card-description {
+        p {
+          @include font-style(17px, normal);
+          color: $font-color;
+        }
+      }
+    }
+  }
+}
