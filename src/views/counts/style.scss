@@ -1,0 +1,18 @@
+@import "../../assets/scss/variables.scss";
+
+.number-section {
+  @include d-flex();
+  text-align: center;
+  .count-content {
+    border-right: 1px solid $border-color;
+    padding-right: 44px;
+    h1 {
+      margin: 0;
+      @include font-style(4.438rem, bold);
+    }
+    p {
+      @include font-style(1.063rem, normal);
+      color: $font-color;
+    }
+  }
+}

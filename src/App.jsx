@@ -1,6 +1,7 @@
+import Counts from "./views/counts";
 import Home from "./views/home";
 import NfthubCollection from "./views/nfthub-collection";
-
+import WhyChooseUs from "./views/why-choose-us";
 
 
 function App() {
@@ -8,6 +9,8 @@ function App() {
     <>
       <Home />
       <NfthubCollection />
+      <WhyChooseUs />
+      <Counts />
     </>
   );
 }
