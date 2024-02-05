@@ -1,13 +1,13 @@
 import SectionWrapper from "../../components/common/SectionWrapper";
-import NumbersCount from "../../components/numbers/NumbersCount";
+import SubscribeForm from "../../components/subscribe/SubscribeForm";
 import "./style.scss";
 
-const Counts = () => {
+const Subscribe = () => {
   return (
     <SectionWrapper>
-      <NumbersCount />
+      <SubscribeForm />
     </SectionWrapper>
   );
 };
 
-export default Counts;
+export default Subscribe;

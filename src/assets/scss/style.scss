@@ -29,6 +29,21 @@ body {
   }
 }
 
+h1 {
+  margin: 0;
+}
+.row {
+  width: 100%;
+  @include d-flex();
+  .col-6 {
+    width: 50%;
+    // padding: 0 15px;
+  }
+}
+
+.order-2{
+  order: 2;
+}
 .container {
   max-width: 1230px;
   margin: 0 auto;
@@ -48,6 +63,8 @@ body {
 
 .section-divider {
   text-align: center;
+  margin-top: 130px !important;
+  margin-bottom: 120px !important;
 }
 
 .section-heading {

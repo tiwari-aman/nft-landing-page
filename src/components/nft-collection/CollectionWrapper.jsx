@@ -1,7 +1,6 @@
 import SectionHeading from "../common/SectionHeading";
 import CollectionSlider from "./CollectionSlider";
-import Button from '../common/Button'
-import SectionDivider from "../common/SectionDivider";
+import Button from "../common/Button";
 
 const CollectionWrapper = () => {
   return (
@@ -9,9 +8,8 @@ const CollectionWrapper = () => {
       <SectionHeading primary={"Nfthub's"} secondary={"Collection"} />
       <CollectionSlider />
       <div className="button-container">
-      <Button label={"View Collection"} />
+        <Button label={"View Collection"} />
       </div>
-      <SectionDivider />
     </div>
   );
 };

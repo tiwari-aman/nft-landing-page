@@ -1,0 +1,40 @@
+@import "../../assets/scss/variables.scss";
+
+.meet-section {
+  .profiles {
+    margin-top: 75px;
+    @include d-flex($display: grid);
+    grid-template-columns: auto auto auto auto;
+    @include media-screen($lg) {
+      grid-template-columns: auto auto;
+    }
+    @include media-screen($sm) {
+      grid-template-columns: auto;
+    }
+    .profile-card {
+      width: 307px;
+      @include d-flex($direction: column, $align: center);
+      text-align: center;
+      .profile-img {
+        border: 6px solid $white;
+        outline: $border-color solid 1px;
+        border-radius: 30px;
+        margin-bottom: 24px;
+      }
+      .profile-detail {
+        h2 {
+          margin: 0;
+          margin-bottom: 15px;
+          @include font-style(22px, bold);
+        }
+        p {
+          @include font-style(16px, normal);
+          color: $font-color;
+        }
+        .social-icons{
+          @include d-flex($gap: 18px, $justify: center);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@import "../../assets/scss/variables.scss";
+
+.get-started-section {
+    background-image: url("../../assets/images/pages/get-started-bg.svg");
+    padding-top: 148px;
+    padding-bottom: 128px;
+  .get-started-content {
+    @include d-flex($direction: column, $justify: center);
+    .desc {
+      margin-top: 24px;
+      margin-bottom: 45px;
+    }
+  }
+}

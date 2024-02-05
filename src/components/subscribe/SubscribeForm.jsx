@@ -1,0 +1,27 @@
+import React from "react";
+import SectionHeading from "../common/SectionHeading";
+import Button from "../common/Button";
+import SectionDivider from "../common/SectionDivider";
+
+const SubscribeForm = () => {
+  return (
+    <>
+    <div className="subscribe-form">
+      <SectionHeading primary={"Never"} secondary={"miss a drop!"} />
+      <p className="desc">
+        Subscribe to our super-rare and exclusive drops & collectibles.
+      </p>
+      <div className="form-input">
+        <input
+          className="input-field"
+          type="text"
+          placeholder="Enter your email"
+        />
+        <Button label={"Subscribe"} />
+      </div>
+    </div>
+    </>
+  );
+};
+
+export default SubscribeForm;

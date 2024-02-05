@@ -1,7 +1,6 @@
 @import "../../assets/scss/variables.scss";
 
 .choose-us-section {
-  padding-bottom: 110px;
   .section-heading {
     .primary {
       margin: 0;
@@ -14,9 +13,8 @@
       @include d-flex($justify: center, $gap: 1.75rem);
       flex-wrap: wrap;
     }
-    padding-bottom: 130px;
     .quality-card {
-      height: 277px;
+      height: 377px;
       width: 278px;
       padding: 49px 33px;
       border: 1px solid $border-color;

@@ -1,0 +1,74 @@
+@import "../../assets/scss/variables.scss";
+
+.footer {
+  padding-top: 81px;
+  padding-bottom: 35px;
+  .footer-content {
+    padding-bottom: 52px;
+    @include d-flex($gap: 20px);
+    @include media-screen($md) {
+      @include d-flex($direction: column, $align: flex-start);
+      text-align: start;
+    }
+    .company-details {
+      max-width: 380px;
+      @include d-flex($direction: column, $align: flex-start);
+      //   @include media-screen($md) {
+      //     @include d-flex($direction: column, $align: );
+      //     // text-align: center;
+      //   }
+      img {
+        cursor: pointer;
+      }
+      .desc {
+        color: $font-color;
+        @include font-style(17px, normal);
+      }
+    }
+    .links-container {
+      @include d-flex($gap: 64px, $align: flex-start);
+      @include media-screen($md) {
+        @include d-flex($direction: column);
+        // text-align: center;
+      }
+      .links-1,
+      .links-2 {
+        h3 {
+          @include font-style(22px, bold);
+        }
+        ul {
+          padding: 0;
+          li {
+            list-style-type: none;
+            @include font-style(18px, normal);
+            color: $font-color;
+            margin-bottom: 14px;
+            cursor: pointer;
+            &:hover {
+              transition: all 0.3s ease-in-out;
+              background: $primary-color;
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            }
+          }
+        }
+      }
+    }
+  }
+  .footer-bottom {
+    @include d-flex();
+    @include media-screen($md) {
+      @include d-flex($direction: column, $align: center);
+      text-align: center;
+    }
+    p {
+      color: $font-color;
+      @include font-style(15px, normal);
+      color: $font-color;
+    }
+    .policy {
+      cursor: pointer;
+      @include d-flex($gap: 1.25rem);
+    }
+  }
+}

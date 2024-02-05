@@ -8,7 +8,6 @@ const WhyChooseUsContainer = () => {
     <div className="choose-us-section">
       <SectionHeading primary={"Why"} secondary={"choose us?"} />
       <QualityCardContainer />
-      <SectionDivider />
     </div>
   );
 };
