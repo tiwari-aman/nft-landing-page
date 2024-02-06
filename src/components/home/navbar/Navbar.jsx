@@ -4,6 +4,7 @@ import SocialIcons from "../../common/SocialIcons";
 import HamburgerMenu from "./HamburgerMenu";
 import { useState } from "react";
 import SidebarMenu from "./SidebarMenu";
+import DarkModeToggle from "../../common/DarkModeToggle";
 
 const Navbar = () => {
   const [show, setShow] = useState();
@@ -16,7 +17,11 @@ const Navbar = () => {
     <>
       <div className="navbar container">
         {/* Logo */}
-        <img src={Logo} alt="NftLogo" />
+        <div className="logo">
+          {/* <img src={Logo} alt="NftLogo" /> */}
+          <h1 className="logo-text">NFTHub</h1>
+          <DarkModeToggle />
+        </div>
         <div className="nav-menu">
           {/* Links */}
           <Navlinks />
@@ -27,6 +32,7 @@ const Navbar = () => {
         </div>
 
         {/* Hamburger Menu */}
+
         <HamburgerMenu toggleMenu={toggleMenu} />
       </div>
       {show && <SidebarMenu toggleMenu={toggleMenu} />}

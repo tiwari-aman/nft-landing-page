@@ -4,7 +4,7 @@ import heroImg from "../../../assets/images/pages/hero-section-image.svg";
 
 const HeroSection = () => {
   return (
-    <section className="hero-section container">
+    <div className="hero-section container">
       <div className="hero-content">
         <h1>High Quality NFT Collection</h1>
         <p>
@@ -17,7 +17,7 @@ const HeroSection = () => {
       <div className="hero-image">
         <img src={heroImg} alt="hero" />
       </div>
-    </section>
+    </div>
   );
 };
 

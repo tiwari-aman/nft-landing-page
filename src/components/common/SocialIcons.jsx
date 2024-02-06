@@ -1,19 +1,21 @@
-import twitter from "../../assets/images/icons/twitter.svg";
-import discord from "../../assets/images/icons/discord.svg";
-import instagram from "../../assets/images/icons/instagram.svg";
-import facebook from "../../assets/images/icons/briefcase.svg";
+import { Icon } from "@iconify/react";
 
 const SocialIcons = () => {
-  const socialIconsImages = [twitter, discord, instagram, facebook];
+  const socialIcons = [
+    "mdi:twitter",
+    "ic:baseline-discord",
+    "mdi:instagram",
+    "fa-solid:wallet",
+  ];
 
   return (
     <div className="social-icons">
-      {socialIconsImages.map((item, index) => {
+      {socialIcons.map((item, index) => {
         return (
-          <img
+          <Icon
             className="icon"
             key={index}
-            src={item}
+            icon={item}
             alt="socialIcons"
             width={30}
             height={26}

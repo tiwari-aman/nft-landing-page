@@ -13,10 +13,6 @@
     .company-details {
       max-width: 380px;
       @include d-flex($direction: column, $align: flex-start);
-      //   @include media-screen($md) {
-      //     @include d-flex($direction: column, $align: );
-      //     // text-align: center;
-      //   }
       img {
         cursor: pointer;
       }
@@ -29,7 +25,6 @@
       @include d-flex($gap: 64px, $align: flex-start);
       @include media-screen($md) {
         @include d-flex($direction: column);
-        // text-align: center;
       }
       .links-1,
       .links-2 {

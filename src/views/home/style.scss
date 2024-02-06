@@ -1,9 +1,11 @@
 @import "../../assets/scss/variables.scss";
 
 .home {
-  background: #ffffff
-    url("../../assets/images/pages/hero-section-background.svg") no-repeat right
-    top;
+  .light-mode {
+    background: #ffffff
+      url("../../assets/images/pages/hero-section-background.svg") no-repeat
+      right top;
+  }
 }
 
 /** Navbar */
@@ -14,6 +16,15 @@
     padding-top: 27px;
   }
   @include d-flex();
+  .logo {
+    @include d-flex($gap: 1rem);
+    .logo-text {
+      @include font-style(32px, bold);
+      font-family: $secondaryFont;
+      cursor: pointer;
+    }
+  }
+
   .nav-menu {
     @include d-flex();
     @include media-screen($lg) {
@@ -25,6 +36,12 @@
     @include font-style();
     .navlink {
       cursor: pointer;
+      &:hover {
+        transition: all 3s ease-in;
+        background: $primary-color;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
     }
   }
   .social-icons {
@@ -124,16 +141,24 @@
     @include media-screen($lg) {
       @include d-flex($direction: column);
       text-align: center;
+      width: 90%;
     }
     h1 {
       margin: 0;
       margin-bottom: 28px;
+      text-shadow: 0px 4px 4px rgba(0,0,0, 0.4);
       @include font-style(4rem, bold);
+      @include media-screen($md) {
+        @include font-style(40px, bold);
+      }
     }
     p {
       margin-bottom: 36px;
       @include font-style(22px, regular);
       color: $font-color;
+      @include media-screen($md) {
+        @include font-style(19px, regular);
+      }
     }
 
     .rating-section {
@@ -162,7 +187,6 @@
         }
         p {
           margin: 0;
-
           @include font-style(12px, regular);
           color: $font-color;
         }
@@ -171,6 +195,9 @@
   }
   .hero-image {
     width: 50%;
+    @include media-screen($md) {
+      width: 90%;
+    }
     img {
       width: 100%;
     }
@@ -178,12 +205,17 @@
 }
 
 /** Wallets section */
-.wallets{
+.wallets {
   @include d-flex();
   margin-bottom: 120px;
   @include media-screen($lg) {
     justify-content: center;
     flex-wrap: wrap;
-    gap: 1.25rem;
+    row-gap: 25px;
+    column-gap: 30px;
+    .wallet{
+      width: 132px;
+      gap:  0;
+    }
   }
 }

@@ -17,14 +17,14 @@ function App() {
       <Home />
       <NfthubCollection />
       <WhyChooseUs />
-      <Counts />
+      {/* <Counts />
       <Features />
       <Subscribe />
       <Roadmap />
       <MeetTheArtists />
       <Faq />
       <GetStarted />
-      <Footer />
+      <Footer /> */}
     </>
   );
 }
