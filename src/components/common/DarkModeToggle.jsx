@@ -1,11 +1,12 @@
-import { useState, useEffect } from "react";
+import { useEffect, useContext } from "react";
 import "../../assets/scss/style.scss";
 import { Icon } from "@iconify/react";
+import { DarkModeContext } from "../../context/DarkModeContext";
 
 const DarkModeToggle = () => {
-  const [darkMode, setDarkMode] = useState(
-    JSON.parse(localStorage.getItem("DARK_MODE")) === true
-  );
+
+  const { darkMode, setDarkMode } = useContext(DarkModeContext);
+
 
   useEffect(() => {
     if (darkMode) {
@@ -30,7 +31,7 @@ const DarkModeToggle = () => {
 
   return (
     <Icon
-      className="mode-icon"    
+      className="mode-icon"
       icon={darkMode ? "iconamoon:mode-light-fill" : "tdesign:mode-dark"}
       width="1.75rem"
       height="1.75rem"

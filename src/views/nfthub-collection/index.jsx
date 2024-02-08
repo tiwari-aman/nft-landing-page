@@ -4,7 +4,7 @@ import "./style.scss";
 
 const NfthubCollection = () => {
   return (
-    <SectionWrapper>
+    <SectionWrapper id="Collection">
       <CollectionWrapper />
     </SectionWrapper>
   );

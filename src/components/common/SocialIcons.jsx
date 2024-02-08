@@ -1,24 +1,18 @@
 import { Icon } from "@iconify/react";
 
-const SocialIcons = () => {
-  const socialIcons = [
-    "mdi:twitter",
-    "ic:baseline-discord",
-    "mdi:instagram",
-    "fa-solid:wallet",
-  ];
-
+const SocialIcons = ({iconsArr, width, height}) => {
+  
   return (
     <div className="social-icons">
-      {socialIcons.map((item, index) => {
+      {iconsArr?.map((item, index) => {
         return (
           <Icon
             className="icon"
             key={index}
             icon={item}
             alt="socialIcons"
-            width={30}
-            height={26}
+            width={width}
+            height={height}
           />
         );
       })}

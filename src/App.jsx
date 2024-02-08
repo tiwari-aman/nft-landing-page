@@ -9,22 +9,23 @@ import MeetTheArtists from "./views/meet-the-artists";
 import Faq from "./views/faq";
 import GetStarted from "./views/get-started";
 import Footer from "./views/footer";
-
+import Navbar from "./components/home/navbar/Navbar";
 
 function App() {
   return (
     <>
+      <Navbar />
       <Home />
       <NfthubCollection />
       <WhyChooseUs />
-      {/* <Counts />
+      <Counts />
       <Features />
       <Subscribe />
       <Roadmap />
       <MeetTheArtists />
       <Faq />
       <GetStarted />
-      <Footer /> */}
+      <Footer />
     </>
   );
 }

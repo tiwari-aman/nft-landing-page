@@ -13,6 +13,7 @@ const FeaturesListing = () => {
         "Use Trust Wallet, Metamask or any wallet to connect to multiple chains the app.",
       subTitle2:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit Metamask or any wallet ipsam temporibus.",
+      order: 1,
     },
     {
       img: feat2,
@@ -30,6 +31,7 @@ const FeaturesListing = () => {
         "Earn ETH and BIT for all your NFTs that you sell on our marketplace.",
       subTitle2:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit Metamask or any wallet ipsam temporibus.",
+      order: 1,
     },
   ];
 

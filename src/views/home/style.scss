@@ -8,58 +8,6 @@
   }
 }
 
-/** Navbar */
-.navbar {
-  &.container {
-    max-width: 1230px;
-    margin: 0 auto;
-    padding-top: 27px;
-  }
-  @include d-flex();
-  .logo {
-    @include d-flex($gap: 1rem);
-    .logo-text {
-      @include font-style(32px, bold);
-      font-family: $secondaryFont;
-      cursor: pointer;
-    }
-  }
-
-  .nav-menu {
-    @include d-flex();
-    @include media-screen($lg) {
-      @include d-flex($display: none);
-    }
-  }
-  .navlinks {
-    @include d-flex($gap: 2rem);
-    @include font-style();
-    .navlink {
-      cursor: pointer;
-      &:hover {
-        transition: all 3s ease-in;
-        background: $primary-color;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-    }
-  }
-  .social-icons {
-    @include d-flex($gap: 1.25rem);
-    .icon {
-      cursor: pointer;
-    }
-  }
-
-  .toggler {
-    @include d-flex($display: none);
-    cursor: pointer;
-    @include media-screen($lg) {
-      @include d-flex($display: block);
-    }
-  }
-}
-
 /** Sidebar */
 .sidebar-container {
   width: 100%;
@@ -67,7 +15,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 9999;
   transition-timing-function: ease-in;
   transition: 0.2s;
   @include d-flex($display: none);
@@ -79,6 +27,9 @@
     height: 100vh;
     background: rgb(255, 255, 255);
     box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.5);
+    &.nav-dark {
+      background: $secondary-color !important;
+    }
     .sidebar-header {
       padding: 4px;
       background: $primary;
@@ -87,6 +38,14 @@
       .toggle-icon {
         margin: 15px 15px;
         text-align: end;
+        cursor: pointer !important;
+        .cross-icon {
+          transition: 0.5s;
+          transform: rotate(-90deg); 
+          &:hover {
+            transform: rotate(90deg);
+          }
+        }
       }
       .navlinks {
         @include d-flex($align: flex-start);
@@ -101,6 +60,10 @@
           border-bottom: 1px solid $border-color;
           &:first-child {
             border-top: 1px solid $border-color;
+          }
+          &:hover {
+            transition: all 3s ease-in;
+            @include text-linear-gradient($direction: to right);
           }
         }
       }
@@ -146,8 +109,11 @@
     h1 {
       margin: 0;
       margin-bottom: 28px;
-      text-shadow: 0px 4px 4px rgba(0,0,0, 0.4);
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
       @include font-style(4rem, bold);
+      @include media-screen($xl) {
+        @include font-style(50px, bold);
+      }
       @include media-screen($md) {
         @include font-style(40px, bold);
       }
@@ -213,9 +179,9 @@
     flex-wrap: wrap;
     row-gap: 25px;
     column-gap: 30px;
-    .wallet{
+    .wallet {
       width: 132px;
-      gap:  0;
+      gap: 0;
     }
   }
 }

@@ -17,7 +17,7 @@ const SubscribeForm = () => {
           type="text"
           placeholder="Enter your email"
         />
-        <Button label={"Subscribe"} />
+        <Button label={"Subscribe"} noArrow={true}/>
       </div>
     </div>
     </>

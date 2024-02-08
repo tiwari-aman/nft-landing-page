@@ -2,35 +2,64 @@
 
 .features-section {
   .features-list {
-    padding-top: 80px;
+    margin-top: 80px;
     .feature-detail {
-      margin-bottom: 120px;
+      @include d-flex($gap: 110px);
+      @include media-screen($lg) {
+        text-align: center;
+        @include d-flex($direction: column, $align: center, $justify: center);
+        margin-bottom: 80px;
+        &:nth-child(2) {
+          flex-direction: column-reverse;
+        }
+        &:last-child {
+          margin-bottom: 0px;
+        }
+      }
+      .feature-img {
+        width: 50%;
+        @include media-screen($md) {
+          width: 100%;
+        }
+        img {
+          width: 100%;
+        }
+      }
       .feature-content {
         margin: 35px 0;
+        width: 50%;
+        @include media-screen($lg) {
+          width: 100%;
+          margin: 40px 0;
+        }
         .feature-number {
           @include font-style(19px, bold);
-          background: linear-gradient(#2600fc, #ff00ea);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
+          @include text-linear-gradient(25deg)
         }
         .feature-title {
           @include font-style(56px, bold);
           margin-bottom: 25px;
+          @include media-screen($lg) {
+            @include font-style(40px, bold);
+          }
         }
-
         .feature-sub {
           @include font-style(19px, normal);
           color: $font-color;
+          @include media-screen($lg) {
+            @include font-style(17px, normal);
+          }
         }
         .learn-more {
-          margin-top: 49px;
-          @include d-flex($justify: flex-start, $gap: 1rem);
+          display: inline-block;
+          gap: 0.25rem !important;
           @include font-style(17px, bold);
-          text-decoration: underline;
-          text-decoration-color: #838383 !important;
-          text-decoration-thickness: 2px;
-          text-underline-offset: 5px;
+          border-bottom: 2px solid $border-color;
           cursor: pointer;
+          .arrow {
+            vertical-align: middle;
+            transform: rotateY(180deg);
+          }
         }
       }
     }

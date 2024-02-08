@@ -1,6 +1,12 @@
 import logo from "../../assets/images/logos/nft-gradient-logo.svg";
+import { SocialMediaIcons } from "../../constants/constants";
+import SocialIcons from "../common/SocialIcons";
 
 const FooterLogoAndLinks = () => {
+
+  const { twitter, discord, youtube } = SocialMediaIcons;
+  const socialIconArray = [twitter, discord, youtube];
+
   return (
     <div className="footer-content">
       <div className="company-details">
@@ -11,7 +17,7 @@ const FooterLogoAndLinks = () => {
           Join our Discord channel or follow us on Twitter to keep up to date
           with our latest work and announcements.
         </p>
-        <p>social icons</p>
+        <SocialIcons iconsArr={socialIconArray} width={20} height={20}/>
       </div>
       <div className="links-container">
         <div className="links-1">

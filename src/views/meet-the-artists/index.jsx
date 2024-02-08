@@ -1,10 +1,10 @@
 import ScreenWrapper from "../../components/common/SectionWrapper";
 import Meet from "../../components/meet-artists/Meet";
-import './style.scss'
+import "./style.scss";
 
 const MeetTheArtists = () => {
   return (
-    <ScreenWrapper>
+    <ScreenWrapper id="Team">
       <Meet />
     </ScreenWrapper>
   );

@@ -1,5 +1,6 @@
 import { useState } from "react";
-import arrow from "../../assets/images/icons/arrow-up-down.svg";
+import classNames from "classnames";
+import { Icon } from "@iconify/react";
 
 const QuestionsDropdown = ({ data, index }) => {
   const { ques, ans } = data;
@@ -12,10 +13,11 @@ const QuestionsDropdown = ({ data, index }) => {
         {index !== 0 && <hr className="divider" />}
         <div className="question-container" onClick={() => setShow(!show)}>
           <div className="title">{ques || ""}</div>
-          <img
-            className={show ? "dropdown-arrow active" : "dropdown-arrow"}
-            src={arrow}
-            alt="arrow"
+          <Icon
+            icon="ep:arrow-up"
+            width="20 "
+            height="20"
+            className={classNames("dropdown-arrow", { active: !show })}
           />
         </div>
         {show && <p>{ans || ""}</p>}

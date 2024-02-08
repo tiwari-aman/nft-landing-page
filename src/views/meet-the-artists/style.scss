@@ -3,23 +3,42 @@
 .meet-section {
   .profiles {
     margin-top: 75px;
-    @include d-flex($display: grid);
+    @include d-flex($display: grid, $align: flex-start);
     grid-template-columns: auto auto auto auto;
-    @include media-screen($lg) {
+    @include media-screen($md) {
       grid-template-columns: auto auto;
-    }
-    @include media-screen($sm) {
-      grid-template-columns: auto;
+      place-content: normal;
+      column-gap: 20px;
+      row-gap: 30px;
     }
     .profile-card {
-      width: 307px;
       @include d-flex($direction: column, $align: center);
       text-align: center;
-      .profile-img {
-        border: 6px solid $white;
-        outline: $border-color solid 1px;
-        border-radius: 30px;
-        margin-bottom: 24px;
+      &:nth-child(odd) {
+        margin-top: 30px;
+        @include media-screen($md) {
+          margin-top: 0px;
+        }
+      }
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        transition: all 0.2s ease-in-out;
+        top: -4px;
+        background-color: $primary;
+        transform: scale(1.05);
+      }
+      .profile {
+        width: 130px;
+        .profile-img {
+          border: 6px solid transparent;
+          &.dark {
+            border: 6px solid $border-color;
+          }
+          outline: $border-color solid 1px;
+          border-radius: 30px;
+          margin-bottom: 24px;
+          width: 100%;
+        }
       }
       .profile-detail {
         h2 {
@@ -31,8 +50,11 @@
           @include font-style(16px, normal);
           color: $font-color;
         }
-        .social-icons{
+        .social-icons {
           @include d-flex($gap: 18px, $justify: center);
+          .icon {
+            cursor: pointer;
+          }
         }
       }
     }

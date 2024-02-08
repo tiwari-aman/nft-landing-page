@@ -74,3 +74,14 @@ $xxxxl: 1800px;
     @content;
   }
 }
+
+@mixin text-linear-gradient($direction: null){
+  @if($direction) {
+    background: linear-gradient($direction,#2600fc, #ff00ea);
+  }
+  @else {
+    background: linear-gradient(#2600fc, #ff00ea);
+  }
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

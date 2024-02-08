@@ -4,7 +4,7 @@ import "./style.scss";
 
 const Counts = () => {
   return (
-    <SectionWrapper>
+    <SectionWrapper id="About">
       <NumbersCount />
     </SectionWrapper>
   );

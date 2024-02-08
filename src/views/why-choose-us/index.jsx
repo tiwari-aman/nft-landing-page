@@ -4,7 +4,7 @@ import SectionWrapper from "../../components/common/SectionWrapper";
 
 const WhyChooseUs = () => {
   return (
-    <SectionWrapper> 
+    <SectionWrapper id="Choose"> 
       <WhyChooseUsContainer />
     </SectionWrapper>
   );

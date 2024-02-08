@@ -1,17 +1,33 @@
-import SocialIcons from "../../common/SocialIcons.jsx";
+import { useContext } from "react";
+import { SocialMediaIcons } from "../../../constants/constants";
+import SocialIcons from "../../common/SocialIcons";
 import Navlinks from "./Navlinks";
+import { DarkModeContext } from "../../../context/DarkModeContext";
+import { Icon } from "@iconify/react";
+import classNames from "classnames";
 
 const SidebarMenu = ({ toggleMenu }) => {
+  const { twitter, discord, instagram, wallets } = SocialMediaIcons;
+  const iconsArr = [twitter, discord, instagram, wallets];
+
+  const { darkMode } = useContext(DarkModeContext);
+
   return (
-    <div className="sidebar-container">
-      <div className="sidebar-content">
+    <div className="sidebar-container ">
+      <div className={classNames("sidebar-content", { "nav-dark": darkMode })}>
         <div className="sidebar-header"></div>
         <div className="sidebar-body">
-          <div className="toggle-icon" onClick={toggleMenu}>
-            X
+          <div className="toggle-icon">
+            <Icon
+              icon="icon-park-outline:close-one"
+              className="cross-icon"
+              width="25"
+              height="25"
+              onClick={toggleMenu}
+            />
           </div>
           <Navlinks />
-          <SocialIcons />
+          <SocialIcons iconsArr={iconsArr} width={30} height={26} />
         </div>
       </div>
     </div>

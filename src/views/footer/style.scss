@@ -20,6 +20,12 @@
         color: $font-color;
         @include font-style(17px, normal);
       }
+      .social-icons{
+        @include d-flex($gap: 20px);
+        .icon {
+          cursor: pointer;
+        }
+      }
     }
     .links-container {
       @include d-flex($gap: 64px, $align: flex-start);
@@ -41,9 +47,7 @@
             cursor: pointer;
             &:hover {
               transition: all 0.3s ease-in-out;
-              background: $primary-color;
-              -webkit-background-clip: text;
-              -webkit-text-fill-color: transparent;
+              @include text-linear-gradient($direction: to right);
             }
           }
         }

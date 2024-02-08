@@ -7,10 +7,11 @@ const RoadmapCard = ({ data, index }) => {
       <div className="card-header">
         <p className="phase">Phase 0{index + 1}</p>
         <div className="discount">
-          <p>
+          <span className="discount-value">
             {discount || 0}
-            <br />%
-          </p>
+            <span className="discount-percent">%</span>
+          </span>
+          
         </div>
       </div>
       <div className="card-body">

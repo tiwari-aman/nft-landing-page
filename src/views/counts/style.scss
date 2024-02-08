@@ -1,19 +1,40 @@
 @import "../../assets/scss/variables.scss";
 
 .number-section {
-  @include d-flex();
+  @include d-flex($display: grid);
+  grid-template-columns: auto auto auto auto;
+  @include media-screen($lg) {
+    grid-template-columns: auto auto;
+    place-content: center;
+    gap: 2rem;
+    column-gap: 6rem;
+  }
+  @include media-screen($md) {
+    grid-template-columns: auto;
+    place-content: center;
+    gap: 2rem;
+  }
   text-align: center;
   .count-content {
     border-right: 1px solid $border-color;
     padding-right: 44px;
+    &:last-child {
+      border-right: none;
+    }
+    @include media-screen($lg) {
+      border: none !important;
+      padding-right: 0 !important;
+    }
     h1 {
       margin: 0;
       @include font-style(4.438rem, bold);
+      @include media-screen($lg) {
+        @include font-style(3.438rem, bold);
+      }
     }
     p {
       @include font-style(1.063rem, normal);
       color: $font-color;
     }
   }
-  margin-bottom: 80px;
 }

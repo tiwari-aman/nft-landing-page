@@ -4,7 +4,7 @@ import './style.scss'
 
 const Roadmap = () => {
   return (
-    <SectionWrapper>
+    <SectionWrapper id="Roadmap">
         <NftRoadmap />
     </SectionWrapper>
   )

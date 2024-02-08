@@ -2,6 +2,7 @@
 
 html {
   -webkit-print-color-adjust: exact !important;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -38,12 +39,17 @@ h1 {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+  color: $secondary-color;
+  &:active {
+    color: $primary-color;
+  }
+}
+
 .row {
   width: 100%;
   @include d-flex();
-  .col-6 {
-    width: 50%;
-  }
 }
 
 .order-2 {
@@ -80,18 +86,102 @@ h1 {
   text-align: center;
   @include font-style(4rem, bold);
   .primary {
-    // @include media-screen($md) {
-    //   @include font-style(2.625rem, bold);
-    // }
+    @include media-screen($lg) {
+      @include font-style(3.625rem, bold);
+    }
+    @include media-screen($md) {
+      @include font-style(2.625rem, bold);
+    }
     .secondary {
-      background: $primary;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      @include media-screen($md) {
+        @include font-style(2.625rem, bold);
+      }
+      @include text-linear-gradient($direction: to right);
     }
   }
-
 }
 
-.mode-icon{
+.mode-icon {
   cursor: pointer;
 }
+
+.btn-arrow {
+  transform: rotateY(180deg);
+}
+
+
+/** Navbar */
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+  padding-right: 15px;
+  display: flex;
+  justify-content: center;
+  &.scrolled-nav {
+    backdrop-filter: blur(10px);
+    transition: all 0.2s ease-in-out;
+    .navbar-container {
+      background: rgba(108, 122, 137, 0.2);
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+        rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+      border-radius: 30px;
+      backdrop-filter: blur(10px);
+      transition: all 0.2s ease-in-out;
+      &.nav-dark {
+        background: rgb(0, 0, 0, 0.2);
+        border: 1px solid rgb(255, 255, 255, 0.1);
+        box-shadow: rgba(225, 225, 225, 0.1) 0px 4px 6px -1px,
+          rgba(225, 225, 225, 0.06) 0px 2px 4px -1px;
+      }
+    }
+  }
+  .navbar-container {
+    width: 1230px;
+    margin-top: 10px;
+    margin-inline: 5px;
+    padding: 9px 15px;
+    @include d-flex();
+    .logo {
+      @include d-flex($gap: 1rem);
+      .logo-text {
+        @include font-style(32px, bold);
+        font-family: $secondaryFont;
+        cursor: pointer;
+      }
+    }
+
+    .nav-menu {
+      @include d-flex();
+      @include media-screen($lg) {
+        @include d-flex($display: none);
+      }
+    }
+    .navlinks {
+      @include d-flex($gap: 2rem);
+      @include font-style();
+      .navlink {
+        cursor: pointer;
+        &:hover {
+          transition: all 3s ease-in;
+          @include text-linear-gradient($direction: to right);
+        }
+      }
+    }
+    .social-icons {
+      @include d-flex($gap: 1.25rem);
+      .icon {
+        cursor: pointer;
+      }
+    }
+
+    .toggler {
+      @include d-flex($display: none);
+      cursor: pointer;
+      @include media-screen($lg) {
+        @include d-flex($display: block);
+      }
+    }
+  }
+}
+
