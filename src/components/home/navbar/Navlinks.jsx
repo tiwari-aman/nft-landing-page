@@ -1,7 +1,11 @@
-const Navlinks = () => {
+const Navlinks = ({ setShow, show }) => {
   const navArr = ["Home", "Collection", "Choose", "About", "Roadmap", "Team"];
 
   const ScrollToId = (id) => {
+    if(show){
+      setShow(!show)
+      document.body.style.overflow = "unset";
+    }
     document.getElementById(id).scrollIntoView({
       behavior: "smooth",
       block: "start",

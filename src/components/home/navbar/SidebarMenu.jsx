@@ -6,7 +6,7 @@ import { DarkModeContext } from "../../../context/DarkModeContext";
 import { Icon } from "@iconify/react";
 import classNames from "classnames";
 
-const SidebarMenu = ({ toggleMenu }) => {
+const SidebarMenu = ({ toggleMenu, setShow , show }) => {
   const { twitter, discord, instagram, wallets } = SocialMediaIcons;
   const iconsArr = [twitter, discord, instagram, wallets];
 
@@ -26,7 +26,7 @@ const SidebarMenu = ({ toggleMenu }) => {
               onClick={toggleMenu}
             />
           </div>
-          <Navlinks />
+          <Navlinks {...{ setShow , show}}/>
           <SocialIcons iconsArr={iconsArr} width={30} height={26} />
         </div>
       </div>

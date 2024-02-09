@@ -70,6 +70,9 @@ a {
   border-radius: 50px;
   cursor: pointer;
   @include font-style(17px, bold);
+  @include media-screen($md) {
+    @include font-style(15px, bold);
+  }
   @include d-flex($gap: 0.5rem);
 }
 
@@ -109,7 +112,6 @@ a {
   transform: rotateY(180deg);
 }
 
-
 /** Navbar */
 .navbar {
   position: fixed;
@@ -139,7 +141,7 @@ a {
   .navbar-container {
     width: 1230px;
     margin-top: 10px;
-    margin-inline: 5px;
+    margin-inline: 13px;
     padding: 9px 15px;
     @include d-flex();
     .logo {
@@ -148,6 +150,9 @@ a {
         @include font-style(32px, bold);
         font-family: $secondaryFont;
         cursor: pointer;
+        @include media-screen($lg) {
+          @include font-style(25px, bold);
+        }
       }
     }
 
@@ -183,5 +188,78 @@ a {
       }
     }
   }
-}
 
+  /** Sidebar */
+  .sidebar-container {
+    width: 100%;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    transition-timing-function: ease-in;
+    transition: 0.2s;
+    @include d-flex($display: none);
+    @include media-screen($lg) {
+      @include d-flex($justify: flex-end, $align: flex);
+    }
+    .sidebar-content {
+      min-width: 300px;
+      height: 100vh;
+      background: rgb(255, 255, 255);
+      box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.5);
+      &.nav-dark {
+        background: $secondary-color !important;
+      }
+      .sidebar-header {
+        padding: 4px;
+        background: $primary;
+      }
+      .sidebar-body {
+        padding-right: 15px;
+        .toggle-icon {
+          margin: 15px 15px;
+          text-align: end;
+          cursor: pointer !important;
+          .cross-icon {
+            transition: 0.5s;
+            transform: rotate(-90deg);
+            &:hover {
+              transform: rotate(90deg);
+            }
+          }
+        }
+        .navlinks {
+          @include d-flex($align: flex-start);
+          @include font-style();
+          flex-direction: column;
+          margin-top: 15px;
+          overflow: hidden;
+          .navlink {
+            width: 100%;
+            padding: 10px 25px;
+            cursor: pointer;
+            border-bottom: 1px solid $border-color;
+            &:first-child {
+              border-top: 1px solid $border-color;
+            }
+            &:hover {
+              transition: all 3s ease-in;
+              @include text-linear-gradient($direction: to right);
+            }
+          }
+        }
+        .social-icons {
+          padding: 30px 10px;
+          @include d-flex($gap: 1.25rem);
+          .icon {
+            border: 1px solid $border-color;
+            border-radius: 5px;
+            padding: 12px 15px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
