@@ -24,7 +24,7 @@ const Navbar = () => {
   const iconsArr = [twitter, discord, instagram, wallets];
 
   const changeNavBg = () => {
-    window.scrollY >= 20 ? setScroled(true) : setScroled(false);
+    window.scrollY >= 10 ? setScroled(true) : setScroled(false);
   };
 
   useEffect(() => {
@@ -55,7 +55,7 @@ const Navbar = () => {
           {/* Hamburger Menu */}
           <HamburgerMenu toggleMenu={toggleMenu} />
         </div>
-      {show && <SidebarMenu toggleMenu={toggleMenu} setShow={setShow} show={show}/>}
+       <SidebarMenu toggleMenu={toggleMenu} setShow={setShow} show={show}/>
       </div>
     </>
   );

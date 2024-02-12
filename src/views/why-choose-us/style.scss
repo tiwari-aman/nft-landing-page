@@ -1,5 +1,17 @@
 @import "../../assets/scss/variables.scss";
 
+#Choose {
+  background: url("../../assets/images/icons/purple-circle.svg"),
+    url("../../assets/images/icons/cross.svg"),
+    url("../../assets/images/icons/pink-circle.svg");
+  background-repeat: no-repeat;
+  background-position: 4% 13%, 0% 85%, 100% 23%;
+
+  @include media-screen($lg) {
+    background: none;
+  }
+}
+
 .choose-us-section {
   .section-heading {
     .primary {
@@ -22,7 +34,7 @@
       height: 300px;
       max-width: 211px;
       width: 100%;
-      padding: 49px 33px; 
+      padding: 49px 33px;
       border: 1px solid $border-color;
       border-radius: 25px;
       transition: all 0.3s ease-in-out;
@@ -50,10 +62,10 @@
         p {
           @include font-style(17px, normal);
           color: $font-color;
-          line-height: 27px ;
+          line-height: 27px;
         }
       }
-      &:nth-child(even){
+      &:nth-child(even) {
         margin-top: 48px !important;
         @include media-screen($xl) {
           margin-top: 0px !important;

@@ -1,4 +1,4 @@
-import React from "react";
+import PropTypes from "prop-types";
 
 const SectionHeading = ({ primary, secondary }) => {
   return (
@@ -8,6 +8,11 @@ const SectionHeading = ({ primary, secondary }) => {
       </h1>
     </div>
   );
+};
+
+SectionHeading.propTypes = {
+  primary: PropTypes.string,
+  secondary: PropTypes.string,
 };
 
 export default SectionHeading;

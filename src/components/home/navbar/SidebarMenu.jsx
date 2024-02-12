@@ -5,16 +5,22 @@ import Navlinks from "./Navlinks";
 import { DarkModeContext } from "../../../context/DarkModeContext";
 import { Icon } from "@iconify/react";
 import classNames from "classnames";
+import PropTypes from "prop-types";
 
-const SidebarMenu = ({ toggleMenu, setShow , show }) => {
+const SidebarMenu = ({ toggleMenu, setShow, show }) => {
   const { twitter, discord, instagram, wallets } = SocialMediaIcons;
   const iconsArr = [twitter, discord, instagram, wallets];
 
   const { darkMode } = useContext(DarkModeContext);
 
   return (
-    <div className="sidebar-container ">
-      <div className={classNames("sidebar-content", { "nav-dark": darkMode })}>
+    <div className={classNames("sidebar-container", { "show ": show })}>
+      <div
+        className={classNames("sidebar-content", {
+          "nav-dark": darkMode,
+          "showSideBar ": show,
+        })}
+      >
         <div className="sidebar-header"></div>
         <div className="sidebar-body">
           <div className="toggle-icon">
@@ -26,12 +32,18 @@ const SidebarMenu = ({ toggleMenu, setShow , show }) => {
               onClick={toggleMenu}
             />
           </div>
-          <Navlinks {...{ setShow , show}}/>
+          <Navlinks {...{ setShow, show }} />
           <SocialIcons iconsArr={iconsArr} width={30} height={26} />
         </div>
       </div>
     </div>
   );
+};
+
+SidebarMenu.propTypes = {
+  toggleMenu: PropTypes.func,
+  setShow: PropTypes.func,
+  show: PropTypes.bool,
 };
 
 export default SidebarMenu;

@@ -1,13 +1,27 @@
+//** React Imports */
 import { useEffect, useContext } from "react";
-import "../../assets/scss/style.scss";
+
+//** Package Imports */
 import { Icon } from "@iconify/react";
+
+//** File Imports */
+import "../../assets/scss/style.scss";
 import { DarkModeContext } from "../../context/DarkModeContext";
 
 const DarkModeToggle = () => {
-
+  //** Hooks */
   const { darkMode, setDarkMode } = useContext(DarkModeContext);
 
+  /**
+   * Handle the mode change.
+   */
+  const handleModeChange = () => {
+    setDarkMode(!darkMode);
+  };
 
+  /**
+   * Perform side effects after the darkMode state changes.
+   */
   useEffect(() => {
     if (darkMode) {
       document.body.classList.add("dark-mode");
@@ -24,10 +38,6 @@ const DarkModeToggle = () => {
     }
     localStorage.setItem("DARK_MODE", JSON.stringify(darkMode));
   }, [darkMode]);
-
-  const handleModeChange = () => {
-    setDarkMode(!darkMode);
-  };
 
   return (
     <Icon

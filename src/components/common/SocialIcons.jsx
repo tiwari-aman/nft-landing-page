@@ -1,7 +1,8 @@
+//** Package Imports */
 import { Icon } from "@iconify/react";
+import PropTypes from "prop-types";
 
-const SocialIcons = ({iconsArr, width, height}) => {
-  
+const SocialIcons = ({ iconsArr, width, height }) => {
   return (
     <div className="social-icons">
       {iconsArr?.map((item, index) => {
@@ -18,6 +19,12 @@ const SocialIcons = ({iconsArr, width, height}) => {
       })}
     </div>
   );
+};
+
+SocialIcons.propTypes = {
+  iconsArr: PropTypes.array,
+  width: PropTypes.number,
+  height: PropTypes.number,
 };
 
 export default SocialIcons;
