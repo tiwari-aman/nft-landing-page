@@ -1,0 +1,114 @@
+@import "../../assets/scss/variables.scss";
+
+.home {
+  .light-mode {
+    background: #ffffff
+      url("../../assets/images/pages/hero-section-background.svg") no-repeat
+      right top;
+  }
+}
+
+/** Hero section */
+.hero-section {
+  padding: 0 15px;
+  &.container {
+    max-width: 1230px;
+    margin: 0 auto;
+    padding-top: 170px;
+    padding-bottom: 220px;
+    @include media-screen($lg) {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+  }
+  @include d-flex($justify: space-between, $align: center);
+  @include media-screen($lg) {
+    @include d-flex($direction: column, $gap: 2rem);
+    text-align: center;
+  }
+  .hero-content {
+    width: 40%;
+    @include media-screen($lg) {
+      @include d-flex($direction: column);
+      text-align: center;
+      width: 90%;
+    }
+    h1 {
+      margin: 0;
+      margin-bottom: 28px;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
+      @include font-style(4rem, bold);
+      @include media-screen($xl) {
+        @include font-style(50px, bold);
+      }
+      @include media-screen($md) {
+        @include font-style(40px, bold);
+      }
+    }
+    p {
+      margin-bottom: 36px;
+      @include font-style(22px, regular);
+      color: $font-color;
+      @include media-screen($md) {
+        @include font-style(19px, regular);
+      }
+    }
+
+    .rating-section {
+      @include d-flex($justify: flex-start);
+      margin-top: 65px;
+      .avatar-container {
+        @include d-flex();
+        position: relative;
+        .avatar {
+          position: absolute;
+          border-radius: 50%;
+          &:nth-child(2) {
+            left: 28px;
+          }
+          &:nth-child(3) {
+            left: 56px;
+          }
+        }
+      }
+      .rating-content {
+        margin-left: 120px;
+
+        h2 {
+          margin: 0;
+          @include font-style(32px, bold);
+        }
+        p {
+          margin: 0;
+          @include font-style(12px, regular);
+          color: $font-color;
+        }
+      }
+    }
+  }
+  .hero-image {
+    width: 50%;
+    @include media-screen($md) {
+      width: 90%;
+    }
+    img {
+      width: 100%;
+    }
+  }
+}
+
+/** Wallets section */
+.wallets {
+  @include d-flex();
+  margin-bottom: 120px;
+  @include media-screen($lg) {
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 25px;
+    column-gap: 30px;
+    .wallet {
+      width: 132px;
+      gap: 0;
+    }
+  }
+}

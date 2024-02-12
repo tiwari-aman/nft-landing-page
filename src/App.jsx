@@ -1,35 +1,33 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Home from "./views/home";
+import NfthubCollection from "./views/nfthub-collection";
+import WhyChooseUs from "./views/why-choose-us";
+import Counts from "./views/counts";
+import Features from "./views/features";
+import Subscribe from "./views/subscribe";
+import Roadmap from "./views/roadmap";
+import MeetTheArtists from "./views/meet-the-artists";
+import Faq from "./views/faq";
+import GetStarted from "./views/get-started";
+import Footer from "./views/footer";
+import Navbar from "./components/home/navbar/Navbar";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Navbar />
+      <Home />
+      <NfthubCollection />
+      <WhyChooseUs />
+      <Counts />
+      <Features />
+      <Subscribe />
+      <Roadmap />
+      <MeetTheArtists />
+      <Faq />
+      <GetStarted />
+      <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -1,0 +1,87 @@
+//  ================================================================================================
+//  ? TIP:  It is recommended to use this file for overriding bootstrap variables.
+//  ================================================================================================
+
+//  ================================================================================================
+//  ? TIP:  It is recommended to use this file for overriding bootstrap variables.
+//  ================================================================================================
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+
+$primary: linear-gradient(to right, #2600fc, #ff00ea);
+$primary-color: linear-gradient(to right, #2600fc, #ff00ea);
+$secondary-color: #0f051d;
+$black: #333333;
+$white: #ffffff;
+$font-color: #7b7583;
+$logo-color: #5e5873;
+$border-color: rgba(123, 117, 131, 0.3);
+$primaryFont: "Inter", sans-serif;
+$secondaryFont: "Orbitron", sans-serif;
+
+$fs18: 18px;
+
+$fw300: 300;
+$fw400: 400;
+$fw500: 500;
+$fw600: 600;
+$fw700: 700;
+$fw800: 800;
+
+$xss: 320px;
+$xxs: 420px;
+$xs: 475px;
+$sm: 576px;
+$md: 767px;
+$lg: 991px;
+$xl: 1200px;
+$xxl: 1500px;
+$xlnew: 1199px;
+$xxl: 1400px;
+$xxxl: 1600px;
+$xxxxl: 1800px;
+
+@mixin truncate-text($max-lines: 1) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $max-lines;
+}
+
+@mixin d-flex(
+  $display: flex,
+  $justify: space-between,
+  $align: center,
+  $gap: 0,
+  $direction: row
+) {
+  display: $display;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+  flex-direction: $direction;
+}
+
+@mixin font-style($fs: $fs18, $fw: $fw700) {
+  font-size: $fs !important;
+  font-weight: $fw;
+}
+
+@mixin media-screen($screen-width) {
+  @media screen and (max-width: $screen-width) {
+    @content;
+  }
+}
+
+@mixin text-linear-gradient($direction: null){
+  @if($direction) {
+    background: linear-gradient($direction,#2600fc, #ff00ea);
+  }
+  @else {
+    background: linear-gradient(#2600fc, #ff00ea);
+  }
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
