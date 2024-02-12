@@ -1,4 +1,6 @@
+//** Package Imports */
 import { Icon } from "@iconify/react";
+import PropTypes from "prop-types";
 
 const Button = ({ label, noArrow }) => {
   return (
@@ -17,6 +19,11 @@ const Button = ({ label, noArrow }) => {
       )}
     </button>
   );
+};
+
+Button.propTypes = {
+  label: PropTypes.string,
+  noArrow: PropTypes.bool,
 };
 
 export default Button;

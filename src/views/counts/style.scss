@@ -1,5 +1,15 @@
 @import "../../assets/scss/variables.scss";
 
+#About {
+  background: url("../../assets/images/icons/purple-circle.svg"),
+    url("../../assets/images/icons/coin.svg");
+  background-repeat: no-repeat;
+  background-position: 75% 1%, 28% 77%;;
+
+  @include media-screen($lg) {
+    background: none;
+  }
+}
 .number-section {
   @include d-flex($display: grid);
   grid-template-columns: auto auto auto auto;
