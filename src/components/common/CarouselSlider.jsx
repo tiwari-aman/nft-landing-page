@@ -33,5 +33,5 @@ export default function CarouselSlider({ data, contentToRender }) {
 
 CarouselSlider.propTypes = {
   data: PropTypes.array,
-  contentToRender: PropTypes.element,
+  contentToRender: PropTypes.func,
 };

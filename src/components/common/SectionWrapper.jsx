@@ -3,13 +3,19 @@ import PropTypes from "prop-types";
 
 //** File Imports */
 import SectionDivider from "./SectionDivider";
+import AnimationWrapper from "./AnimationWrapper";
+
+
 
 const SectionWrapper = ({ children, id }) => {
+
   return (
-    <section className="container" id={id}>
-      {children}
-      <SectionDivider />
-    </section>
+    <AnimationWrapper>
+      <section className="container" id={id} >
+        {children}
+        <SectionDivider />
+      </section>
+     </AnimationWrapper>
   );
 };
 

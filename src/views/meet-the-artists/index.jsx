@@ -1,3 +1,4 @@
+//** File Imports */
 import ScreenWrapper from "../../components/common/SectionWrapper";
 import Meet from "../../components/meet-artists/Meet";
 import "./style.scss";

@@ -1,16 +1,29 @@
-import Navlinks from "./Navlinks";
-import SocialIcons from "../../common/SocialIcons";
-import HamburgerMenu from "./HamburgerMenu";
+//** React Imports */
 import { useEffect, useState } from "react";
-import SidebarMenu from "./SidebarMenu";
-import DarkModeToggle from "../../common/DarkModeToggle";
-import { SocialMediaIcons } from "../../../constants/constants";
+
+//** Package Imports */
 import classNames from "classnames";
 
+//** File Imports */
+import Navlinks from "./Navlinks";
+import HamburgerMenu from "./HamburgerMenu";
+import SidebarMenu from "./SidebarMenu";
+import SocialIcons from "../common/SocialIcons";
+import DarkModeToggle from "../common/DarkModeToggle";
+import { SocialMediaIcons } from "../../constants/constants";
+
 const Navbar = () => {
+  //**States */
   const [show, setShow] = useState();
   const [scrolled, setScroled] = useState(false);
 
+  const { twitter, discord, instagram, wallets } = SocialMediaIcons;
+  //** Icon Array */
+  const iconsArr = [twitter, discord, instagram, wallets];
+
+  /**
+   * Toggles the menu visibility and adjusts body overflow accordingly.
+   */
   const toggleMenu = () => {
     setShow((pre) => !pre);
     if (show) {
@@ -20,9 +33,9 @@ const Navbar = () => {
     }
   };
 
-  const { twitter, discord, instagram, wallets } = SocialMediaIcons;
-  const iconsArr = [twitter, discord, instagram, wallets];
-
+  /**
+   * A function to change the background of the navigation based on the scroll position of the window.
+   */
   const changeNavBg = () => {
     window.scrollY >= 10 ? setScroled(true) : setScroled(false);
   };
@@ -38,24 +51,19 @@ const Navbar = () => {
     <>
       <div className={classNames("navbar", { "scrolled-nav": scrolled })}>
         <div className="navbar-container">
-          {/* Logo */}
           <div className="logo">
-            <h1 className="logo-text">NFTHub</h1>
+            <h1 className="logo-text" onClick={() => window.scrollTo(0, 0)}>NFTHub</h1>
             <DarkModeToggle />
           </div>
           <div className="nav-menu">
-            {/* Links */}
             <Navlinks />
           </div>
           <div className="nav-menu">
-            {/* Social Icon */}
             <SocialIcons iconsArr={iconsArr} width={30} height={26} />
           </div>
-
-          {/* Hamburger Menu */}
           <HamburgerMenu toggleMenu={toggleMenu} />
         </div>
-       <SidebarMenu toggleMenu={toggleMenu} setShow={setShow} show={show}/>
+        <SidebarMenu toggleMenu={toggleMenu} setShow={setShow} show={show} />
       </div>
     </>
   );

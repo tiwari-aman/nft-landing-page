@@ -1,10 +1,14 @@
+//** Package Imports */
 import { useState } from "react";
 import classNames from "classnames";
+import PropTypes from "prop-types";
 import { Icon } from "@iconify/react";
 
 const QuestionsDropdown = ({ data, index }) => {
+  //**Props destructuring */
   const { ques, ans } = data;
 
+  //**States */
   const [show, setShow] = useState(false);
 
   return (
@@ -24,6 +28,11 @@ const QuestionsDropdown = ({ data, index }) => {
       </div>
     </div>
   );
+};
+
+QuestionsDropdown.propTypes = {
+  data: PropTypes.object,
+  index: PropTypes.number,
 };
 
 export default QuestionsDropdown;

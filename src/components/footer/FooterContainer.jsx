@@ -1,3 +1,4 @@
+//**Files Imports */
 import FooterBottom from "./FooterBottom";
 import FooterLogoAndLinks from "./FooterLogoAndLinks";
 

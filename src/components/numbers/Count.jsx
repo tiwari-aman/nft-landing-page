@@ -1,4 +1,5 @@
-import React from "react";
+//** Package Imports */
+import PropTypes from "prop-types";
 
 const Count = ({ heading, subHeading }) => {
   return (
@@ -7,6 +8,11 @@ const Count = ({ heading, subHeading }) => {
       <p>{subHeading || ""}</p>
     </div>
   );
+};
+
+Count.propTypes = {
+  heading: PropTypes.string,
+  subHeading: PropTypes.string,
 };
 
 export default Count;

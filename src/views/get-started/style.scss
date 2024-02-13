@@ -1,9 +1,10 @@
 @import "../../assets/scss/variables.scss";
 
 .get-started-section {
-    background-image: url("../../assets/images/pages/get-started-bg.svg");
-    padding-top: 148px;
-    padding-bottom: 128px;
+  margin-top: 120px;
+  background-image: url("../../assets/images/pages/get-started-bg.svg");
+  padding-top: 148px;
+  padding-bottom: 128px;
   .get-started-content {
     @include d-flex($direction: column, $justify: center);
     .desc {

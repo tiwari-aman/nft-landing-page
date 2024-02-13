@@ -1,3 +1,6 @@
+//** Package Imports */
+import PropTypes from "prop-types";
+
 const QualityCard = ({ data }) => {
   const { img, title, description } = data;
 
@@ -14,6 +17,10 @@ const QualityCard = ({ data }) => {
       </div>
     </div>
   );
+};
+
+QualityCard.propTypes = {
+  data: PropTypes.object,
 };
 
 export default QualityCard;
