@@ -1,3 +1,4 @@
+//** File Imports */
 import SectionWrapper from "../../components/common/SectionWrapper";
 import FaqQuestions from "../../components/faq/FaqQuestions";
 import './style.scss'

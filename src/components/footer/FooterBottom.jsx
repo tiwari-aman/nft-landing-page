@@ -1,5 +1,3 @@
-
-
 const FooterBottom = () => {
   return (
     <div className="footer-bottom">

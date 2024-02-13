@@ -1,6 +1,9 @@
+//** File Imports */
 import RoadmapCard from "./RoadmapCard";
+import MapThrough from "../common/MapThrough";
 
 const RoadmapCardContainer = () => {
+  //** Card Array */
   const cardArr = [
     { discount: 0, title: "Planning" },
     { discount: 25, title: "Production" },
@@ -12,9 +15,7 @@ const RoadmapCardContainer = () => {
 
   return (
     <div className="card-container">
-      {cardArr?.map((item, index) => {
-        return <RoadmapCard key={index} data={item} index={index} />;
-      })}
+      <MapThrough data={cardArr} RenderComponent={RoadmapCard} />
     </div>
   );
 };

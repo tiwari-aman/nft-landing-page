@@ -1,17 +1,24 @@
+//** React Imports */
 import { useContext } from "react";
-import { SocialMediaIcons } from "../../../constants/constants";
-import SocialIcons from "../../common/SocialIcons";
-import Navlinks from "./Navlinks";
-import { DarkModeContext } from "../../../context/DarkModeContext";
-import { Icon } from "@iconify/react";
-import classNames from "classnames";
+
+//** Package Imports */
 import PropTypes from "prop-types";
+import classNames from "classnames";
+import { Icon } from "@iconify/react";
+
+//** File Imports */
+import Navlinks from "./Navlinks";
+import SocialIcons from "../common/SocialIcons";
+import { SocialMediaIcons } from "../../constants/constants";
+import { DarkModeContext } from "../../context/DarkModeContext";
 
 const SidebarMenu = ({ toggleMenu, setShow, show }) => {
-  const { twitter, discord, instagram, wallets } = SocialMediaIcons;
-  const iconsArr = [twitter, discord, instagram, wallets];
-
+  //**Hooks */
   const { darkMode } = useContext(DarkModeContext);
+
+  const { twitter, discord, instagram, wallets } = SocialMediaIcons;
+  //**Icon Array */
+  const iconsArr = [twitter, discord, instagram, wallets];
 
   return (
     <div className={classNames("sidebar-container", { "show ": show })}>

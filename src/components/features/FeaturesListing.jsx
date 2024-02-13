@@ -1,10 +1,12 @@
+//** File Imports */
 import feat1 from "../../assets/images/pages/feat1.svg";
 import feat2 from "../../assets/images/pages/feat2.svg";
 import feat3 from "../../assets/images/pages/feat3.svg";
+import MapThrough from "../common/MapThrough";
 import FeatureDetail from "./FeatureDetail";
-import SectionDivider from "../common/SectionDivider";
 
 const FeaturesListing = () => {
+  //** Features Array */
   const featuresArr = [
     {
       img: feat1,
@@ -37,9 +39,7 @@ const FeaturesListing = () => {
 
   return (
     <div className="features-list">
-      {featuresArr.map((item, index) => {
-        return <FeatureDetail key={index} data={item} index={index} />;
-      })}
+      <MapThrough data={featuresArr} RenderComponent={FeatureDetail} />
     </div>
   );
 };

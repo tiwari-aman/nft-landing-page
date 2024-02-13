@@ -1,10 +1,13 @@
+//** File Imports */
 import ProfileCard from "./ProfileCard";
 import artist1 from "../../assets/images/pages/artist1.svg";
 import artist2 from "../../assets/images/pages/artist2.svg";
 import artist3 from "../../assets/images/pages/artist3.svg";
 import artist4 from "../../assets/images/pages/artist4.svg";
+import MapThrough from "../common/MapThrough";
 
 const ArtistProfiles = () => {
+  //** Artist Array */
   const artistArr = [
     {
       img: artist1,
@@ -30,9 +33,7 @@ const ArtistProfiles = () => {
 
   return (
     <div className="profiles">
-      {artistArr?.map((profile, index) => {
-        return <ProfileCard key={index} profile={profile} />;
-      })}
+      <MapThrough data={artistArr} RenderComponent={ProfileCard} />
     </div>
   );
 };

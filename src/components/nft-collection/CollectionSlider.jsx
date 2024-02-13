@@ -1,3 +1,4 @@
+//** File Imports */
 import CarouselSlider from "../common/CarouselSlider";
 import CollectionCard from "./CollectionCard";
 import cardImg from "../../assets/images/pages/card-img-1.svg";
@@ -7,6 +8,7 @@ import cardImg4 from "../../assets/images/pages/card-img-4.svg";
 
 
 const CollectionSlider = () => {
+  //** Collection array */
   const data = [
     {
       img: cardImg,
@@ -74,7 +76,7 @@ const CollectionSlider = () => {
     <div className="collection-slider">
       <CarouselSlider
         data={data}
-        contentToRender={(props) => <CollectionCard props={props} />}
+        contentToRender={(props) => <CollectionCard data={props} />}
       />
     </div>
   );

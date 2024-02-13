@@ -1,3 +1,4 @@
+//** File Imports */
 import SectionWrapper from "../../components/common/SectionWrapper";
 import SubscribeForm from "../../components/subscribe/SubscribeForm";
 import "./style.scss";

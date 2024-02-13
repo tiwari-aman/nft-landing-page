@@ -1,6 +1,7 @@
-import SectionHeading from "../common/SectionHeading";
-import CollectionSlider from "./CollectionSlider";
+//** File Imports */
 import Button from "../common/Button";
+import CollectionSlider from "./CollectionSlider";
+import SectionHeading from "../common/SectionHeading";
 
 const CollectionWrapper = () => {
   return (

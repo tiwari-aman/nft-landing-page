@@ -1,11 +1,13 @@
-import React from "react";
+//** File Imports */
 import QualityCard from "./QualityCard";
 import wcu1 from "../../assets/images/icons/wcu1.svg";
 import wcu2 from "../../assets/images/icons/wcu2.svg";
 import wcu3 from "../../assets/images/icons/wcu3.svg";
 import wcu4 from "../../assets/images/icons/wcu4.svg";
+import MapThrough from "../common/MapThrough";
 
 const QualityCardContainer = () => {
+  //** Card Array */
   const cardArr = [
     {
       img: wcu1,
@@ -35,9 +37,7 @@ const QualityCardContainer = () => {
 
   return (
     <div className="card-container">
-      {cardArr?.map((card) => {
-        return <QualityCard key={card.title} data={card} />;
-      })}
+       <MapThrough data={cardArr} RenderComponent={QualityCard} /> 
     </div>
   );
 };

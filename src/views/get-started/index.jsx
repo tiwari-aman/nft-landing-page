@@ -1,5 +1,6 @@
+//** File Imports */
 import GetStartedContent from "../../components/get-started/GetStartedContent";
-import './style.scss'
+import "./style.scss";
 
 const GetStarted = () => {
   return (

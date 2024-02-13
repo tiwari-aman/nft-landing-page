@@ -1,10 +1,13 @@
-import logo from "../../assets/images/logos/nft-gradient-logo.svg";
-import { SocialMediaIcons } from "../../constants/constants";
+//** File Imports */
 import SocialIcons from "../common/SocialIcons";
+import { SocialMediaIcons } from "../../constants/constants";
+import logo from "../../assets/images/logos/nft-gradient-logo.svg";
 
 const FooterLogoAndLinks = () => {
 
   const { twitter, discord, youtube } = SocialMediaIcons;
+
+  //** Icon Array */
   const socialIconArray = [twitter, discord, youtube];
 
   return (

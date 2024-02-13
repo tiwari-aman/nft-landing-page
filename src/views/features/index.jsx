@@ -1,6 +1,7 @@
+//** File Imports */
 import FeaturesContainer from "../../components/features/FeaturesContainer";
-import './style.scss'
 import SectionWrapper from "../../components/common/SectionWrapper";
+import './style.scss'
 
 
 const Features = () => {

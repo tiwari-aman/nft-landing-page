@@ -1,5 +1,8 @@
-const CollectionCard = ({ props }) => {
-  const { img, title, subtitle } = props;
+//** Package Imports */
+import PropTypes from "prop-types";
+
+const CollectionCard = ({ data }) => {
+  const { img, title, subtitle } = data;
 
   return (
     <div className="card">
@@ -12,6 +15,10 @@ const CollectionCard = ({ props }) => {
       </div>
     </div>
   );
+};
+
+CollectionCard.propTypes = {
+  data: PropTypes.object,
 };
 
 export default CollectionCard;

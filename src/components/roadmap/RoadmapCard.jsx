@@ -1,6 +1,8 @@
-const RoadmapCard = ({ data, index }) => {
+//** Package Imports */
+import PropTypes from "prop-types";
 
-    const {discount, title} = data;
+const RoadmapCard = ({ data, index }) => {
+  const { discount, title } = data;
 
   return (
     <div className="card">
@@ -11,7 +13,6 @@ const RoadmapCard = ({ data, index }) => {
             {discount || 0}
             <span className="discount-percent">%</span>
           </span>
-          
         </div>
       </div>
       <div className="card-body">
@@ -29,6 +30,11 @@ const RoadmapCard = ({ data, index }) => {
       </div>
     </div>
   );
+};
+
+RoadmapCard.propTypes = {
+  data: PropTypes.object,
+  index: PropTypes.number,
 };
 
 export default RoadmapCard;

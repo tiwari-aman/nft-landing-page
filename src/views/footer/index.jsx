@@ -1,3 +1,4 @@
+//** File Imports */
 import FooterContainer from "../../components/footer/FooterContainer";
 import "./style.scss";
 

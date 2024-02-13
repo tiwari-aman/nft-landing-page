@@ -1,3 +1,4 @@
+//** File Imports */
 import SectionWrapper from "../../components/common/SectionWrapper";
 import CollectionWrapper from "../../components/nft-collection/CollectionWrapper";
 import "./style.scss";

@@ -1,3 +1,4 @@
+//** File Imports */
 import SectionHeading from "../common/SectionHeading";
 import FaqAccordian from "./FaqAccordian";
 

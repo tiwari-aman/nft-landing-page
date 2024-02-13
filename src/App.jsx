@@ -1,3 +1,8 @@
+//** React Imports */
+import { useEffect } from "react";
+
+//** File Imports */
+import Navbar from "./components/navbar/Navbar";
 import Home from "./views/home";
 import NfthubCollection from "./views/nfthub-collection";
 import WhyChooseUs from "./views/why-choose-us";
@@ -9,9 +14,17 @@ import MeetTheArtists from "./views/meet-the-artists";
 import Faq from "./views/faq";
 import GetStarted from "./views/get-started";
 import Footer from "./views/footer";
-import Navbar from "./components/home/navbar/Navbar";
 
 function App() {
+  
+  useEffect(() => {
+    // Scroll to the top of the page when the component mounts (page is refreshed)
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, []);
+
   return (
     <>
       <Navbar />

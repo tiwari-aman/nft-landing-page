@@ -1,6 +1,7 @@
+//** File Imports */
 import WhyChooseUsContainer from "../../components/why-choose-us/WhyChooseUsContainer";
-import "../why-choose-us/style.scss";
 import SectionWrapper from "../../components/common/SectionWrapper";
+import "./style.scss";
 
 const WhyChooseUs = () => {
   return (

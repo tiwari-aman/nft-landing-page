@@ -1,3 +1,4 @@
+//** Package Imports */
 import PropTypes from "prop-types";
 
 const SectionHeading = ({ primary, secondary }) => {

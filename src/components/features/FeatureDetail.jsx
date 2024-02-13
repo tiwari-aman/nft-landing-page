@@ -1,6 +1,9 @@
+//** Package Imports */
+import PropTypes from "prop-types";
 import { Icon } from "@iconify/react";
 
 const FeatureDetail = ({ index, data }) => {
+  //**Props destructuring */
   const { img, title, subTitle1, subTitle2, order } = data;
 
   return (
@@ -16,18 +19,23 @@ const FeatureDetail = ({ index, data }) => {
         <p className="learn-more">
           <span>Learn more </span>
           <span>
-          <Icon
-            icon="material-symbols:arrow-insert"
-            className="arrow"
-            alt="arrow"
-            width={25}
-            height={25}
-          />
+            <Icon
+              icon="material-symbols:arrow-insert"
+              className="arrow"
+              alt="arrow"
+              width={25}
+              height={25}
+            />
           </span>
         </p>
       </div>
     </div>
   );
+};
+
+FeatureDetail.propTypes = {
+  index: PropTypes.number,
+  data: PropTypes.object,
 };
 
 export default FeatureDetail;

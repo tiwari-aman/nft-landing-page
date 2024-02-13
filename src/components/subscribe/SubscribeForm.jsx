@@ -1,7 +1,6 @@
-import React from "react";
+//** File Imports */
 import SectionHeading from "../common/SectionHeading";
 import Button from "../common/Button";
-import SectionDivider from "../common/SectionDivider";
 
 const SubscribeForm = () => {
   return (
